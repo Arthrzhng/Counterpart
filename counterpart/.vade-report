@@ -1,0 +1,45 @@
+# Vercel Speed Insights Installation Report
+
+## Summary
+Successfully installed and configured Vercel Speed Insights for this Next.js App Router project by following the latest official documentation from Vercel.
+
+## Changes Made
+
+### 1. Package Installation
+- Installed `@vercel/speed-insights` package version 1.2.6
+- Updated `package.json` to include the new dependency
+- Updated `package-lock.json` with the new package and its dependencies
+
+### 2. Configuration
+- **Modified**: `counterpart/src/app/layout.tsx`
+  - Added import: `import { SpeedInsights } from "@vercel/speed-insights/next"`
+  - Added `<SpeedInsights />` component inside the `<body>` tag after `{children}`
+  - This follows the Next.js App Router pattern as documented in the official Vercel docs
+
+### 3. Verification
+- ✅ Build completed successfully (`npm run build`)
+- ✅ No new linting errors introduced by our changes
+- ✅ TypeScript compilation successful
+- ✅ Lock files properly updated
+
+### 4. Generated Files
+- **Modified**: `counterpart/next-env.d.ts` - Automatically updated by Next.js build process
+
+## Implementation Details
+
+The implementation follows the official Vercel Speed Insights quickstart guide for Next.js App Router (v13.5+):
+- Fetched latest documentation from: https://vercel.com/docs/speed-insights/quickstart
+- Used the framework-specific instructions for Next.js App Router
+- Placed the SpeedInsights component in the root layout to track all pages
+- The component is self-contained and will automatically begin collecting performance metrics once deployed to Vercel
+
+## Next Steps
+After deployment to Vercel:
+1. Enable Speed Insights in your Vercel project dashboard (if not already enabled)
+2. Performance metrics will appear in the Speed Insights dashboard after users visit the site
+3. No additional configuration is required
+
+## Notes
+- The existing codebase had pre-existing linting warnings/errors in `page.tsx` that are unrelated to this change
+- All changes preserve existing code structure and styling
+- The SpeedInsights component has no visual impact on the UI and runs passively in the background
